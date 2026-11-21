@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的通訊日常｜嚴選通訊行與門號指南（地標網通・傑昇通信・miko米可手機館・洋蔥網通）</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Serif TC & Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        oat: {
+                            50: '#FCFBF9',
+                            100: '#F8F6F1',
+                            200: '#EFECE4',
+                            300: '#E6E1D6',
+                        },
+                        ink: {
+                            900: '#2C2A26',
+                            600: '#787266',
+                            400: '#9A9488',
+                        },
+                        forest: {
+                            700: '#24483E',
+                            600: '#2F5D50',
+                            100: '#E6EFEA',
+                            50: '#F2F7F4',
+                        },
+                        clay: {
+                            600: '#B55B3F',
+                            500: '#C86D51',
+                            100: '#F9EAE5',
+                            50: '#FDF6F3',
+                        },
+                        sage: {
+                            600: '#587864',
+                            500: '#6B8E78',
+                            50: '#F1F5F2',
+                        },
+                        ochre: {
+                            600: '#B88236',
+                            500: '#D49B4B',
+                            50: '#FBF5EC',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8F6F1;
+            color: #2C2A26;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+        h1, h2, h3, .font-editorial {
+            font-family: "Noto Serif TC", serif;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F6F1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D5CFC2;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #BDB5A4;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-forest-600 selection:text-white">
+
+    <div class="min-h-screen flex flex-col lg:flex-row">
+
+        <!-- ==================== 手機版頂部導覽列 ==================== -->
+        <header class="lg:hidden sticky top-0 z-40 bg-oat-50/95 backdrop-blur-md border-b border-oat-300 px-4 h-14 flex items-center justify-between">
+            <button id="mobile-menu-toggle" type="button" aria-label="開啟選單" class="p-2 -ml-2 rounded-xl text-ink-900 hover:bg-oat-200 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <span class="font-editorial font-bold text-base tracking-wide text-ink-900">我的通訊日常</span>
+            <span id="mobile-header-count" class="text-xs font-bold px-2.5 py-1 rounded-lg bg-forest-50 text-forest-600 border border-forest-100">4 間嚴選</span>
+        </header>
+
+        <!-- 手機版側邊抽屜遮罩 -->
+        <div id="drawer-backdrop" onclick="closeMobileDrawer()" class="fixed inset-0 z-40 bg-black/30 backdrop-blur-[1px] hidden lg:hidden"></div>
+
+        <!-- ==================== 左側固定側邊欄 (桌機固定 256px) ==================== -->
+        <aside id="sidebar-drawer" class="fixed lg:sticky top-0 left-0 z-50 h-screen w-[256px] bg-oat-50 border-r border-oat-300 flex flex-col justify-between transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-out shrink-0">
+            <div>
+                <!-- 品牌標題區 -->
+                <div class="px-6 pt-8 pb-6 border-b border-oat-300 flex items-center justify-between">
+                    <div>
+                        <a href="#stores" onclick="switchView('stores'); return false;" class="block font-editorial text-xl font-black tracking-tight text-ink-900 hover:text-forest-600 transition">
+                            我的通訊日常
+                        </a>
+                        <p class="text-xs text-ink-600 mt-1.5 leading-relaxed">比較每一間 • 挑出你的最划算方案</p>
+                    </div>
+                    <button onclick="closeMobileDrawer()" class="lg:hidden p-1.5 rounded-lg text-ink-600 hover:bg-oat-200" aria-label="關閉選單">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 5 大導覽分頁 -->
+                <nav class="px-3.5 py-6 space-y-1.5" aria-label="主要功能選單">
+                    <button type="button" data-nav="stores" onclick="switchView('stores')" class="nav-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-bold bg-forest-50 text-forest-600 border border-forest-100 transition text-left cursor-pointer">
+                        <span class="nav-diamond text-forest-600 font-bold">◆</span>
+                        <span>通訊行與方案</span>
+                    </button>
+
+                    <button type="button" data-nav="spinner" onclick="switchView('spinner')" class="nav-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-medium text-ink-600 hover:bg-oat-200/70 transition text-left cursor-pointer">
+                        <span class="nav-diamond text-clay-500 font-bold">◇</span>
+                        <span>購機轉盤</span>
+                    </button>
+
+                    <button type="button" data-nav="bookmarks" onclick="switchView('bookmarks')" class="nav-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-medium text-ink-600 hover:bg-oat-200/70 transition text-left cursor-pointer">
+                        <span class="nav-diamond text-clay-500 font-bold">◇</span>
+                        <span class="flex-1">收藏店家</span>
+                        <span id="sidebar-bookmark-count" class="text-xs px-2 py-0.5 rounded-full bg-oat-200 text-ink-900 font-bold">2</span>
+                    </button>
+
+                    <button type="button" data-nav="reviews" onclick="switchView('reviews')" class="nav-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-medium text-ink-600 hover:bg-oat-200/70 transition text-left cursor-pointer">
+                        <span class="nav-diamond text-clay-500 font-bold">◇</span>
+                        <span>分享評論</span>
+                    </button>
+
+                    <button type="button" data-nav="add-store" onclick="switchView('add-store')" class="nav-item w-full flex items-center gap-3 px-3.5 py-3 rounded-xl text-sm font-medium text-ink-600 hover:bg-oat-200/70 transition text-left cursor-pointer">
+                        <span class="nav-diamond text-clay-500 font-bold">◇</span>
+                        <span>新增通訊行</span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- 底部標語 -->
+            <div class="p-6 border-t border-oat-300 bg-oat-100/70">
+                <p class="font-editorial text-xs font-bold text-ink-900 leading-relaxed">
+                    比較每一間<br>挑出你的最划算方案
+                </p>
+                <p class="text-[11px] text-ink-600 mt-1.5">地標・傑昇・米可・洋蔥網通</p>
+            </div>
+        </aside>
+
+        <!-- ==================== 右側主內容工作區 ==================== -->
+        <main class="flex-1 min-w-0 px-4 sm:px-8 lg:px-12 py-6 sm:py-10 max-w-5xl mx-auto w-full">
+
+            <!-- =====================================================================
+                 VIEW 1: 通訊行與方案 (預設首頁)
+                 ===================================================================== -->
+            <section id="view-stores" class="view-section space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-oat-300 pb-5">
+                    <div>
+                        <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-forest-600 bg-forest-50 px-2.5 py-1 rounded-md border border-forest-100 mb-2">TELECOM DIRECTORY</span>
+                        <h1 class="text-2xl sm:text-3xl font-black text-ink-900">通訊行與方案</h1>
+                        <p class="text-xs sm:text-sm text-ink-600 mt-1.5">
+                            資料來源：全台指標連鎖通訊行公開報價彙整。空機與門號折扣為參考資料，實際以門市現場報價為準。
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <span id="store-count-badge" class="inline-block text-xs sm:text-sm font-bold text-ink-900 bg-white px-3.5 py-2 rounded-xl border border-oat-300">
+                            共 4 間通訊行
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 搜尋列與特色標籤篩選 -->
+                <div class="bg-white p-4 sm:p-5 rounded-2xl border border-oat-300 space-y-3.5">
+                    <div class="relative">
+                        <svg class="w-5 h-5 text-ink-600 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+                        </svg>
+                        <input id="store-search-input" type="text" oninput="renderStoresList()" placeholder="搜尋店名、地區（台中/台南/台北）、iPhone 16 Pro、三星 S25、5G 攜碼或優惠方案..." class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-forest-600 focus:bg-white transition">
+                    </div>
+
+                    <div id="category-filter-bar" class="flex flex-wrap items-center gap-2">
+                        <span class="text-xs font-bold text-ink-600 mr-1">篩選分類：</span>
+                        <!-- 由 JS 動態生成標籤按鈕 -->
+                    </div>
+                </div>
+
+                <!-- 通訊行卡片列表 -->
+                <div id="stores-list-container" class="grid grid-cols-1 gap-6">
+                    <!-- JS 動態注入 -->
+                </div>
+            </section>
+
+            <!-- =====================================================================
+                 VIEW 1B: 店家詳細資訊頁
+                 ===================================================================== -->
+            <section id="view-store-detail" class="view-section hidden space-y-6">
+                <!-- 麵包屑返回列 -->
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <nav aria-label="麵包屑導覽" class="flex items-center gap-2 text-xs sm:text-sm">
+                        <button type="button" onclick="switchView('stores')" class="font-bold text-forest-600 hover:underline cursor-pointer">
+                            ← 通訊行與方案
+                        </button>
+                        <span class="text-ink-400">/</span>
+                        <span id="breadcrumb-store-name" class="font-bold text-ink-900">地標網通</span>
+                    </nav>
+
+                    <div class="flex items-center gap-2.5">
+                        <button id="detail-bookmark-btn" type="button" onclick="toggleBookmark(currentDetailStoreId)" class="px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition cursor-pointer">
+                            ♥ 已收藏
+                        </button>
+                        <a id="detail-official-link" href="https://www.landtop.com.tw/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs sm:text-sm font-bold transition inline-flex items-center gap-1.5">
+                            <span>官方網站 ↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 店家主資訊卡 (雙欄封面與 7 大規格 <dl>) -->
+                <article id="store-detail-card" class="bg-white rounded-3xl border border-oat-300 overflow-hidden">
+                    <!-- JS 動態注入 -->
+                </article>
+
+                <!-- 6 項店家方案與報價 -->
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-xl font-black text-ink-900 flex items-center gap-2.5">
+                            <span>店家方案與報價</span>
+                            <span id="detail-deals-count" class="text-xs font-sans font-bold px-2.5 py-1 rounded-full bg-clay-50 text-clay-600 border border-clay-100">共 6 項方案</span>
+                        </h2>
+                        <a id="detail-deals-ext-link" href="https://www.landtop.com.tw/" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-bold text-forest-600 hover:underline">
+                            查看官網即時價格表 ↗
+                        </a>
+                    </div>
+                    <div id="detail-deals-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- JS 動態注入 -->
+                    </div>
+                </div>
+
+                <!-- 該店的會員評論與快速留言區 -->
+                <div class="bg-white rounded-3xl border border-oat-300 p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between border-b border-oat-200 pb-4">
+                        <h3 class="text-lg font-black text-ink-900">會員評論</h3>
+                        <button type="button" onclick="switchView('reviews')" class="text-xs font-bold px-3.5 py-2 rounded-xl bg-forest-50 text-forest-600 hover:bg-forest-100 border border-forest-100 transition cursor-pointer">
+                            查看全部評論頁 →
+                        </button>
+                    </div>
+
+                    <div id="detail-reviews-list" class="space-y-3">
+                        <!-- JS 動態注入 -->
+                    </div>
+
+                    <!-- 店家頁快速留言表單 -->
+                    <form onsubmit="handleQuickDetailReview(event)" class="pt-4 border-t border-oat-200 space-y-3">
+                        <div class="text-xs font-bold text-ink-900">快速留下您在這間通訊行的申辦心得：</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <input id="quick-rev-author" type="text" required placeholder="您的暱稱（例：台中王先生）" class="px-3.5 py-2 rounded-xl bg-oat-100 border border-oat-300 text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                            <input id="quick-rev-plan" type="text" placeholder="申辦方案（例：5G 1399 攜碼）" class="px-3.5 py-2 rounded-xl bg-oat-100 border border-oat-300 text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                            <select id="quick-rev-rating" class="px-3.5 py-2 rounded-xl bg-oat-100 border border-oat-300 text-xs sm:text-sm font-bold text-ink-900 focus:outline-none focus:border-forest-600">
+                                <option value="5">★★★★★ 5.0 非常滿意</option>
+                                <option value="4">★★★★☆ 4.0 推薦申辦</option>
+                                <option value="3">★★★☆☆ 3.0 普通</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <input id="quick-rev-content" type="text" required placeholder="分享店員服務態度、實際折扣金額或資料轉移體驗..." class="flex-1 px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                            <button type="submit" class="px-5 py-2.5 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs sm:text-sm font-bold transition cursor-pointer shrink-0">
+                                送出評論
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- =====================================================================
+                 VIEW 2: 購機轉盤 (Canvas 繪製四等分精緻轉盤)
+                 ===================================================================== -->
+            <section id="view-spinner" class="view-section hidden space-y-8">
+                <div class="border-b border-oat-300 pb-5">
+                    <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-clay-600 bg-clay-50 px-2.5 py-1 rounded-md border border-clay-100 mb-2">LUCKY SPINNER</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-ink-900">購機轉盤</h1>
+                    <p class="text-sm text-ink-600 mt-1">空機破盤、配件豪禮、VIP 保固與攜碼高折扣各有優勢，轉一下決定今天去哪間通訊行！</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-3xl border border-oat-300">
+                    <!-- 左側 Canvas 轉盤 -->
+                    <div class="lg:col-span-6 flex flex-col items-center justify-center">
+                        <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+                            <!-- 頂部三角指針 -->
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-20 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[22px] border-t-ink-900 drop-shadow"></div>
+
+                            <!-- Canvas 圓盤 -->
+                            <canvas id="spinner-canvas" width="300" height="300" class="w-full h-full rounded-full border-8 border-oat-200 shadow-md"></canvas>
+
+                            <!-- 中心軸心按鈕 -->
+                            <button type="button" onclick="spinWheel()" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-16 h-16 rounded-full bg-white border-4 border-oat-300 shadow font-editorial font-black text-xs text-ink-900 hover:scale-105 active:scale-95 transition cursor-pointer">
+                                買哪家？
+                            </button>
+                        </div>
+
+                        <button type="button" id="spin-action-btn" onclick="spinWheel()" class="mt-6 px-8 py-3.5 rounded-2xl bg-forest-600 hover:bg-forest-700 text-white font-bold text-base shadow-sm transition cursor-pointer">
+                            開始轉盤！
+                        </button>
+                    </div>
+
+                    <!-- 右側抽選結果與清單 -->
+                    <div class="lg:col-span-6 space-y-5">
+                        <div class="p-6 rounded-2xl bg-oat-100 border border-oat-300 space-y-3">
+                            <span class="text-xs font-bold text-clay-600 uppercase tracking-wider">本次抽選結果</span>
+                            <h2 id="spinner-result-title" class="text-2xl font-black text-ink-900">從 4 間通訊行抽選今日首選</h2>
+                            <p id="spinner-result-desc" class="text-sm text-ink-600 leading-relaxed">
+                                轉盤將從目前收錄的 4 間嚴選連鎖通訊行中均等隨機抽選，為您推薦最適合前往比價與申辦的門市。
+                            </p>
+                            <div id="spinner-result-actions" class="pt-2 flex flex-wrap gap-2.5 hidden">
+                                <button type="button" id="spinner-detail-btn" class="px-4 py-2.5 rounded-xl bg-ink-900 hover:bg-forest-600 text-white text-xs sm:text-sm font-bold transition cursor-pointer">
+                                    查看店家報價方案
+                                </button>
+                                <a id="spinner-web-btn" href="https://www.landtop.com.tw/" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-clay-500 hover:bg-clay-600 text-white text-xs sm:text-sm font-bold transition inline-flex items-center gap-1">
+                                    <span>前往官方網站 ↗</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 全部可抽選店家 -->
+                        <div class="space-y-2.5">
+                            <h3 id="spinner-pool-title" class="text-sm font-bold text-ink-900">全部可抽選通訊行（4 間）</h3>
+                            <div id="spinner-pool-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                <!-- JS 動態注入 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================================
+                 VIEW 3: 收藏店家
+                 ===================================================================== -->
+            <section id="view-bookmarks" class="view-section hidden space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-oat-300 pb-5">
+                    <div>
+                        <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-forest-600 bg-forest-50 px-2.5 py-1 rounded-md border border-forest-100 mb-2">SAVED STORES</span>
+                        <h1 class="text-2xl sm:text-3xl font-black text-ink-900">收藏店家</h1>
+                        <p class="text-sm text-ink-600 mt-1">管理您標記的常用通訊行，換機或合約到期時隨時快速比價。</p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <input id="bookmark-search-input" type="text" oninput="renderBookmarksView()" placeholder="搜尋收藏店家..." class="px-3.5 py-2 rounded-xl bg-white border border-oat-300 text-xs sm:text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                        <label class="inline-flex items-center gap-2.5 bg-white px-4 py-2 rounded-xl border border-oat-300 cursor-pointer select-none">
+                            <input id="only-bookmarked-toggle" type="checkbox" checked onchange="renderBookmarksView()" class="w-4 h-4 accent-forest-600 rounded cursor-pointer">
+                            <span class="text-xs sm:text-sm font-bold text-ink-900">只看我的收藏</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="bookmarks-container" class="space-y-4">
+                    <!-- JS 動態注入 -->
+                </div>
+            </section>
+
+            <!-- =====================================================================
+                 VIEW 4: 分享評論
+                 ===================================================================== -->
+            <section id="view-reviews" class="view-section hidden space-y-8">
+                <div class="border-b border-oat-300 pb-5">
+                    <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-clay-600 bg-clay-50 px-2.5 py-1 rounded-md border border-clay-100 mb-2">COMMUNITY REVIEWS</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-ink-900">分享評論</h1>
+                    <p class="text-sm text-ink-600 mt-1">紀錄您在通訊行購買空機或辦理攜碼的真實體驗，與大家交流最新優惠。</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- 左側評論表單 -->
+                    <div class="lg:col-span-5">
+                        <form id="review-form" onsubmit="handleReviewSubmit(event)" class="bg-white p-6 rounded-3xl border border-oat-300 space-y-4">
+                            <h2 class="text-lg font-black text-ink-900">撰寫購機／攜碼心得</h2>
+
+                            <div>
+                                <label for="review-store-select" class="block text-xs font-bold text-ink-600 mb-1.5">選擇通訊行</label>
+                                <select id="review-store-select" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm font-bold text-ink-900 focus:outline-none focus:border-forest-600">
+                                    <!-- JS 動態填入 -->
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label for="review-author" class="block text-xs font-bold text-ink-600 mb-1.5">您的暱稱</label>
+                                    <input id="review-author" type="text" required placeholder="例：台中一中林先生" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                                </div>
+                                <div>
+                                    <label for="review-plan" class="block text-xs font-bold text-ink-600 mb-1.5">申辦項目（選填）</label>
+                                    <input id="review-plan" type="text" placeholder="例：iPhone 16 Pro 空機" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-ink-600 mb-1.5">滿意度評分</label>
+                                <div class="flex items-center gap-1.5" id="star-rating-picker">
+                                    <button type="button" onclick="setReviewStars(1)" data-star="1" class="star-btn text-2xl text-amber-400 cursor-pointer">★</button>
+                                    <button type="button" onclick="setReviewStars(2)" data-star="2" class="star-btn text-2xl text-amber-400 cursor-pointer">★</button>
+                                    <button type="button" onclick="setReviewStars(3)" data-star="3" class="star-btn text-2xl text-amber-400 cursor-pointer">★</button>
+                                    <button type="button" onclick="setReviewStars(4)" data-star="4" class="star-btn text-2xl text-amber-400 cursor-pointer">★</button>
+                                    <button type="button" onclick="setReviewStars(5)" data-star="5" class="star-btn text-2xl text-amber-400 cursor-pointer">★</button>
+                                    <span id="star-label" class="text-xs font-bold text-ink-600 ml-2">5.0 分（非常滿意）</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="review-content" class="block text-xs font-bold text-ink-600 mb-1.5">心得內容</label>
+                                <textarea id="review-content" rows="4" required placeholder="例如：在洋蔥網通官網先查好價格預約，到現場完全照網路公開價結帳，店員還免費幫忙無痛轉移 LINE 資料！" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 rounded-xl bg-forest-600 hover:bg-forest-700 text-white font-bold text-sm transition cursor-pointer">
+                                送出評論
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 右側最新評論 -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-black text-ink-900">大家的最新評論</h2>
+                            <span id="total-reviews-count" class="text-xs font-bold text-ink-600">共 4 則評論</span>
+                        </div>
+                        <div id="all-reviews-list" class="space-y-4">
+                            <!-- JS 動態注入 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================================
+                 VIEW 5: 新增通訊行 (AI 智慧建檔)
+                 ===================================================================== -->
+            <section id="view-add-store" class="view-section hidden space-y-8">
+                <div class="border-b border-oat-300 pb-5">
+                    <span class="inline-block text-[11px] font-bold tracking-widest uppercase text-forest-600 bg-forest-50 px-2.5 py-1 rounded-md border border-forest-100 mb-2">AI SMART ENTRY</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-ink-900">新增通訊行</h1>
+                    <p class="text-sm text-ink-600 mt-1">輸入通訊行名稱與官方網址，透過 AI 智慧建檔自動整理規格與 6 項招牌方案並同步至全站列表與轉盤。</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- 左側建檔表單 -->
+                    <div class="lg:col-span-6">
+                        <form id="add-store-form" onsubmit="handleAddStoreSubmit(event)" class="bg-white p-6 rounded-3xl border border-oat-300 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h2 class="text-lg font-black text-ink-900">AI 智慧建檔</h2>
+                                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-forest-50 text-forest-600 border border-forest-100">即時同步全站</span>
+                            </div>
+
+                            <div>
+                                <label for="new-store-name" class="block text-xs font-bold text-ink-600 mb-1.5">通訊行名稱 *</label>
+                                <input id="new-store-name" type="text" required placeholder="例如：向東電信 / 葳豐數位" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                            </div>
+
+                            <div>
+                                <label for="new-store-url" class="block text-xs font-bold text-ink-600 mb-1.5">官方網站連結 *</label>
+                                <input id="new-store-url" type="url" required placeholder="https://..." class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label for="new-store-region" class="block text-xs font-bold text-ink-600 mb-1.5">服務據點範圍</label>
+                                    <input id="new-store-region" type="text" placeholder="例如：全台連鎖直營門市" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600">
+                                </div>
+                                <div>
+                                    <label for="new-store-tag" class="block text-xs font-bold text-ink-600 mb-1.5">主打特色標籤</label>
+                                    <select id="new-store-tag" class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm font-bold text-ink-900 focus:outline-none focus:border-forest-600">
+                                        <option value="空機最低價">空機最低價</option>
+                                        <option value="攜碼高折扣">攜碼高折扣</option>
+                                        <option value="全台連鎖">全台連鎖</option>
+                                        <option value="中南部人氣">中南部人氣</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="new-store-desc" class="block text-xs font-bold text-ink-600 mb-1.5">招牌方案與特色說明</label>
+                                <textarea id="new-store-desc" rows="3" placeholder="例如：官網每日公開空機與攜碼優惠價、提供全機包膜與無痛資料轉移服務..." class="w-full px-3.5 py-2.5 rounded-xl bg-oat-100 border border-oat-300 text-sm text-ink-900 focus:outline-none focus:border-forest-600"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 rounded-xl bg-forest-600 hover:bg-forest-700 text-white font-bold text-sm transition cursor-pointer">
+                                執行 AI 智慧建檔並新增
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 右側建檔預覽與清單 -->
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="bg-forest-50 border border-forest-100 rounded-3xl p-6 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-black text-forest-700">🎉 最新 AI 建檔成果預覽</span>
+                                <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-white text-forest-600 border border-forest-100">已同步目錄與轉盤</span>
+                            </div>
+                            <div id="ai-preview-content" class="bg-white rounded-2xl p-4 border border-oat-300 text-sm space-y-1.5">
+                                <div class="font-editorial font-black text-ink-900 text-base">洋蔥網通（最新收錄第四家指標連鎖）</div>
+                                <p class="text-xs text-ink-600">服務據點：台中市北區三民路三段120號（中部發跡、全台超過20間直營門市）</p>
+                                <p class="text-xs text-clay-600 font-bold">招牌專案：官網即時公開空機與攜碼優惠價、全機包膜與無痛資料轉移服務</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl border border-oat-300 p-6 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-base font-black text-ink-900">已建檔通訊行管理列表</h3>
+                                <span id="manage-store-count" class="text-xs font-bold text-ink-600">目前共 4 間通訊行</span>
+                            </div>
+                            <div id="manage-stores-list" class="space-y-2.5">
+                                <!-- JS 動態注入 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ==================== 右下角 Toast 提示 ==================== -->
+    <div id="toast-notification" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-ink-900 text-white px-5 py-3 rounded-2xl shadow-lg border border-ink-600 flex items-center gap-2.5 text-sm font-bold">
+            <span class="text-clay-500">◆</span>
+            <span id="toast-message">操作完成</span>
+        </div>
+    </div>
+
+    <!-- ==================== JavaScript 應用程式邏輯 ==================== -->
+    <script>
+        // 1. 完整 4 家指標連鎖通訊行資料庫
+        const initialStores = [
+            {
+                id: 'landtop',
+                name: '地標網通',
+                subtitle: '全台連鎖直營門市、挑戰手機最低價、攜碼折扣透明公開、現場快速資料轉移',
+                website: 'https://www.landtop.com.tw/',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=地標網通',
+                coverImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=900&q=80',
+                isDefault: true,
+                bookmarked: true,
+                themeColor: '#2F5D50',
+                badgeLabel: '嚴選指標 01',
+                filterCategories: ['全台連鎖', '空機最低價', '攜碼高折扣'],
+                tags: ['全台連鎖', '北部起家', '空機最低價', '攜碼高折扣'],
+                meta: {
+                    address: '台北市中正區八德路一段5號（全台超過40間直營門市）',
+                    phone: '02-2396-0520（全台客服與門市查詢專線）',
+                    priceRange: '空機省 $1,500~$4,500 / 攜碼最高折 $7,000+',
+                    traffic: '捷運忠孝新生站 1 號出口步行約 3 分鐘',
+                    hours: '週一至週日 11:00 – 21:30（全年無休）',
+                    speed: '約 15–25 分鐘（線上預約免排隊、現場備貨充足）',
+                    signature: 'iPhone 16 Pro 系列現金最低價、三大電信 5G 攜碼高折扣、免費無痛資料轉移'
+                },
+                deals: [
+                    {
+                        category: '空機破盤',
+                        name: '【空機最低價】iPhone 16 Pro 256G 全新未拆封',
+                        price: '$36,990',
+                        discountBadge: '現省 $3,410',
+                        desc: '台灣原廠公司貨全新未拆封，官網每日同步透明報價，享 Apple 原廠一年保固。'
+                    },
+                    {
+                        category: '5G 攜碼',
+                        name: '【攜碼高折扣】三大電信 5G 1399 攜碼專案',
+                        price: '折抵 $7,500+',
+                        discountBadge: '攜碼高折扣',
+                        desc: '中華電信／台灣大哥大／遠傳電信攜碼高額購機折抵，可自由搭配旗艦空機或轉換禮券。'
+                    },
+                    {
+                        category: '4G 吃到飽',
+                        name: '【高CP值】台灣大哥大 4G 688 不降速吃到飽',
+                        price: '月付 $688',
+                        discountBadge: '不降速熱銷',
+                        desc: '上網不降速吃到飽高 CP 值資費，合約條款透明單純，絕無隱藏加值服務。'
+                    },
+                    {
+                        category: '旗艦現貨',
+                        name: '【旗艦安卓】Samsung Galaxy S25 Ultra 256G',
+                        price: '$37,990',
+                        discountBadge: '現省 $5,910',
+                        desc: 'S Pen AI 旗艦機台灣公司貨現貨供應，空機直接現折數千元免綁約。'
+                    },
+                    {
+                        category: '舊換新加碼',
+                        name: '【舊機換新機】全品牌二手機現場高價折抵',
+                        price: '最高加碼 $2,500',
+                        discountBadge: '現場估價折抵',
+                        desc: '門市專業人員現場快速檢測估價，舊機殘值直接現場折抵新機金額。'
+                    },
+                    {
+                        category: '防護代貼',
+                        name: '【貼心防護】犀牛盾 / imos 原廠滿版玻璃保護貼',
+                        price: '$890 起',
+                        discountBadge: '免費無塵代貼',
+                        desc: '知名大廠高透光抗刮保護貼優惠價，由專業人員現場無塵精準貼合與資料轉移。'
+                    }
+                ]
+            },
+            {
+                id: 'jyes',
+                name: '傑昇通信',
+                subtitle: '全台超過130間直營門市、挑戰手機市場最低價、買手機送千元配件與月月抽豪禮',
+                website: 'https://www.jyes.com.tw/',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=傑昇通信',
+                coverImage: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80',
+                isDefault: true,
+                bookmarked: false,
+                themeColor: '#C86D51',
+                badgeLabel: '嚴選指標 02',
+                filterCategories: ['全台連鎖', '空機最低價', '攜碼高折扣'],
+                tags: ['全台連鎖', '空機最低價', '配件豪禮'],
+                meta: {
+                    address: '新北市三重區重新路二段78號（全台超過130間直營門市）',
+                    phone: '02-2973-8866（全台客服與門市服務專線）',
+                    priceRange: '空機破盤折 $2,000~$5,000 / 購機贈千元配件金',
+                    traffic: '捷運台北橋站步行約 4 分鐘（全台商圈密集設點）',
+                    hours: '週一至週日 11:30 – 21:30',
+                    speed: '約 15–30 分鐘（直營連鎖快速交機與資料轉移）',
+                    signature: '挑戰手機市場最低價、買手機送千元配件與月月抽豪禮、舊機高價回收折抵'
+                },
+                deals: [
+                    {
+                        category: '空機破盤',
+                        name: '【空機破盤】iPhone 16 128G 挑戰市場最低價',
+                        price: '$26,490',
+                        discountBadge: '現省 $3,410',
+                        desc: '台灣原廠公司貨全新現貨，買手機再贈千元配件購物金與月月抽豪禮活動券。'
+                    },
+                    {
+                        category: '5G 攜碼',
+                        name: '【攜碼回饋】遠傳電信 5G 999 攜碼高回饋專案',
+                        price: '回饋 $6,800',
+                        discountBadge: '贈千元配件金',
+                        desc: '攜碼申辦享高額購機折抵或等值全聯禮券回饋，申辦流程快速透明。'
+                    },
+                    {
+                        category: '小資首選',
+                        name: '【小資輕速】4G 499 輕速吃到飽攜碼專案',
+                        price: '月付 $499',
+                        discountBadge: '月月抽大獎',
+                        desc: '日常社群聊天與通勤聽音樂高 CP 值資費，攜碼申辦加碼享門市好禮。'
+                    },
+                    {
+                        category: '旗艦好禮組',
+                        name: '【旗艦影像】OPPO Find X8 / vivo X200 旗艦組',
+                        price: '$24,990 起',
+                        discountBadge: '現省 $4,000',
+                        desc: '蔡司／哈蘇影像旗艦現貨供應，購機加贈原廠保固延長與獨家配件禮盒。'
+                    },
+                    {
+                        category: '尊榮卡會員',
+                        name: '【尊榮會員】傑昇尊榮卡專屬舊換新與免費健檢',
+                        price: '免費入會享好康',
+                        discountBadge: '舊機高價回收',
+                        desc: '持尊榮卡享每年免費手機清潔健檢、配件折扣及舊換新額外加碼金。'
+                    },
+                    {
+                        category: '安心保修',
+                        name: '【安心保修】手機竊盜險與碎屏保修安心方案',
+                        price: '$1,290 起',
+                        discountBadge: '全台百店服務',
+                        desc: '新機購機同步加保，涵蓋螢幕破裂維修與意外損壞保障，用機更安心。'
+                    }
+                ]
+            },
+            {
+                id: 'miko3c',
+                name: 'miko米可手機館',
+                subtitle: '南台灣發跡人氣連鎖手機館、一站式購機與門號申辦、VIP會員專屬售後保固',
+                website: 'https://www.miko3c.com/?srsltid=AYCX9vLL-ENVC8FWPbS6_2_T6c640WpEm08u66AdHhU99x9gvoQk2Wnj',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=miko米可手機館',
+                coverImage: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=80',
+                isDefault: true,
+                bookmarked: false,
+                themeColor: '#6B8E78',
+                badgeLabel: '嚴選指標 03',
+                filterCategories: ['中南部人氣', '全台連鎖', '攜碼高折扣'],
+                tags: ['中南部人氣', '全台連鎖', '攜碼高折扣', 'VIP保固'],
+                meta: {
+                    address: '台南市中西區和意路68號（南台灣發跡、擴展全台直營門市）',
+                    phone: '06-214-8899（米可線上客服與門市預約專線）',
+                    priceRange: '空機現折 $1,800~$4,800 / 4G吃到飽與5G攜碼高補貼',
+                    traffic: '台南新光三越西門店商圈步行約 3 分鐘',
+                    hours: '週一至週日 11:00 – 21:30',
+                    speed: '約 15–25 分鐘（一對一專人服務、LINE線上預約快取）',
+                    signature: '南台灣人氣連鎖手機館、一站式購機與門號申辦、VIP會員專屬售後保固與螢幕險優惠'
+                },
+                deals: [
+                    {
+                        category: '會員空機價',
+                        name: '【會員現折】iPhone 16 Pro Max 256G 全新未拆封',
+                        price: '$41,290',
+                        discountBadge: '現省 $3,610',
+                        desc: 'miko 會員享空機破盤現折優惠，台灣原廠全新公司貨，官網即時公開透明報價。'
+                    },
+                    {
+                        category: '5G 攜碼',
+                        name: '【攜碼高補貼】中華 / 遠傳 5G 1399 攜碼專案',
+                        price: '折抵 $7,400+',
+                        discountBadge: 'VIP點數加倍',
+                        desc: '一站式比對各大電信 5G 資費，攜碼享高額購機折抵與 VIP 會員點數累積。'
+                    },
+                    {
+                        category: '人氣吃到飽',
+                        name: '【南台灣熱銷】4G 599 不限速吃到飽人氣專案',
+                        price: '月付 $599',
+                        discountBadge: '不限速吃到飽',
+                        desc: '門市熱門指定不限速吃到飽方案，追劇、手遊網路流暢不降速。'
+                    },
+                    {
+                        category: '電競旗艦',
+                        name: '【電競旗艦】ASUS Zenfone / ROG Phone 現貨特惠',
+                        price: '$25,990 起',
+                        discountBadge: '現省 $3,500',
+                        desc: '台灣電競旗艦系列現貨齊全，購機加碼贈送專屬散熱風扇或電競配件優惠。'
+                    },
+                    {
+                        category: 'VIP 尊榮服務',
+                        name: '【VIP保固】舊換新加碼與無痛跨系統資料轉移',
+                        price: '最高加碼 $2,200',
+                        discountBadge: '跨系統無痛搬家',
+                        desc: 'iOS 與 Android 跨系統 LINE 對話紀錄與照片完整無痛轉移，舊機回收再加碼。'
+                    },
+                    {
+                        category: '全機防護組',
+                        name: '【全機防護】原廠認證快充組與螢幕險優惠套餐',
+                        price: '$1,290',
+                        discountBadge: 'VIP售後保固',
+                        desc: '含 PD 快充頭、編織傳輸線與專業全機防護，享 VIP 專屬售後保固服務。'
+                    }
+                ]
+            },
+            {
+                id: 'onion-net',
+                name: '洋蔥網通',
+                subtitle: '中部發跡全台連鎖通訊、官網即時公開空機與攜碼優惠價、全機包膜與無痛資料轉移服務',
+                website: 'https://www.onion-net.com.tw/',
+                mapUrl: 'https://www.google.com/maps/search/?api=1&query=洋蔥網通',
+                coverImage: 'https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=900&q=80',
+                isDefault: true,
+                bookmarked: true,
+                themeColor: '#D49B4B',
+                badgeLabel: '嚴選指標 04',
+                filterCategories: ['中南部人氣', '全台連鎖', '空機最低價', '攜碼高折扣'],
+                tags: ['中部發跡', '全台連鎖', '空機最低價', '攜碼高折扣'],
+                meta: {
+                    address: '台中市北區三民路三段120號（中部發跡、全台超過20間直營門市）',
+                    phone: '04-2225-8877（洋蔥網通全台客服與預約專線）',
+                    priceRange: '空機優惠折 $1,800~$4,600 / 攜碼最高折 $7,200+',
+                    traffic: '台中一中商圈／中友百貨步行約 4 分鐘',
+                    hours: '週一至週日 11:00 – 21:30',
+                    speed: '約 15–25 分鐘（官網即時查價預約、專人無痛資料轉移）',
+                    signature: '中部發跡全台連鎖通訊、官網即時公開空機與攜碼優惠價、全機包膜與無痛資料轉移服務'
+                },
+                deals: [
+                    {
+                        category: '空機破盤',
+                        name: '【空機破盤】iPhone 16 Pro 256G 全新未拆封',
+                        price: '$36,890',
+                        discountBadge: '現省 $3,510',
+                        desc: '原廠公司貨、現場拆封驗機保障，官網即時公開透明空機價格。'
+                    },
+                    {
+                        category: '攜碼神單',
+                        name: '【攜碼神單】中華 / 遠傳 / 台哥大 5G 1399 攜碼專案',
+                        price: '$7,200 購機金',
+                        discountBadge: '攜碼高折扣',
+                        desc: '網購與門市價格同步公開、最高現折 $7,200，三大電信資費自由選。'
+                    },
+                    {
+                        category: '旗艦安卓',
+                        name: '【旗艦安卓】Samsung Galaxy S25 Ultra 256G 優惠價',
+                        price: '$37,990',
+                        discountBadge: '現省 $5,910',
+                        desc: '贈專屬保護貼與快充組、可搭配舊換新現場折抵，原廠公司貨現貨供應。'
+                    },
+                    {
+                        category: '長輩/副門號首選',
+                        name: '【長輩/副門號首選】4G 499 不限速吃到飽攜碼方案',
+                        price: '$499/月',
+                        discountBadge: '攜碼熱銷',
+                        desc: '網路穩定不降速、免預繳專案優惠，高 CP 值不限速上網首選。'
+                    },
+                    {
+                        category: '舊機換新機',
+                        name: '【舊機換新機】全品牌二手機高價回收折抵',
+                        price: '$1,000~$24,000',
+                        discountBadge: '現場折抵',
+                        desc: '現場 10 分鐘快速檢測估價、現折購機款，透明公開回收行情表。'
+                    },
+                    {
+                        category: '貼心加值',
+                        name: '【貼心加值】全機專業防窺玻璃貼＋無痛資料轉移',
+                        price: '$490',
+                        discountBadge: '購機享加購價',
+                        desc: 'LINE 對話紀錄與照片完整搬家、含保固，全機精準防護一次到位。'
+                    }
+                ]
+            }
+        ];
+
+        // 初始會員評論資料（完整涵蓋 4 家連鎖通訊行）
+        let reviewsData = [
+            {
+                id: 'rev-1',
+                storeId: 'landtop',
+                storeName: '地標網通',
+                author: '台北忠孝陳先生',
+                plan: 'iPhone 16 Pro 256G 空機',
+                rating: 5,
+                date: '2026-11-17',
+                content: '在地標網通買 iPhone 16 Pro 256GB 空機，現場現金價跟官網完全一致，不會強迫推銷高價配件包，店員還細心幫忙核對原廠序號與轉移資料，過程不到 20 分鐘！'
+            },
+            {
+                id: 'rev-2',
+                storeId: 'jyes',
+                storeName: '傑昇通信',
+                author: '三重許小姐',
+                plan: '遠傳 5G 999 攜碼專案',
+                rating: 5,
+                date: '2026-11-18',
+                content: '傑昇通信分店就在捷運站附近超方便，辦了遠傳 5G 攜碼搭新手機，除了高額回饋還拿到千元配件購物金跟月月抽獎券，舊機回收估價也很透明實在。'
+            },
+            {
+                id: 'rev-3',
+                storeId: 'miko3c',
+                storeName: 'miko米可手機館',
+                author: '台南林同學',
+                plan: '4G 599 不限速吃到飽',
+                rating: 5,
+                date: '2026-11-20',
+                content: '從台南門市一路支持到現在，miko 米可手機館官網查價超透明，店員非常親切幫我把 iPhone 跨系統資料跟 LINE 紀錄完整轉移好，VIP 會員還送延長保固超划算！'
+            },
+            {
+                id: 'rev-4',
+                storeId: 'onion-net',
+                storeName: '洋蔥網通',
+                author: '台中一中張先生',
+                plan: '中華 5G 1399 攜碼神單',
+                rating: 5,
+                date: '2026-11-21',
+                content: '在洋蔥網通官網先查好攜碼價格直接到台中門市辦理，網購跟現場價格完全同步透明，現折 $7,200 還加購 $490 防窺貼跟 LINE 完整資料搬家，服務超級貼心！'
+            }
+        ];
+
+        // 狀態變數
+        let stores = JSON.parse(JSON.stringify(initialStores));
+        let activeTagFilter = '全部通訊行';
+        let currentDetailStoreId = 'landtop';
+        let selectedReviewStars = 5;
+        let wheelAngle = 0;
+        let isSpinning = false;
+
+        // 2. 分頁導覽切換
+        function switchView(viewName, storeId = null) {
+            document.querySelectorAll('.view-section').forEach(sec => sec.classList.add('hidden'));
+
+            const target = document.getElementById(`view-${viewName}`);
+            if (target) target.classList.remove('hidden');
+
+            const activeNavKey = viewName === 'store-detail' ? 'stores' : viewName;
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                const diamond = btn.querySelector('.nav-diamond');
+                if (btn.dataset.nav === activeNavKey) {
+                    btn.classList.add('bg-forest-50', 'text-forest-600', 'font-bold', 'border', 'border-forest-100');
+                    btn.classList.remove('text-ink-600', 'font-medium');
+                    if (diamond) {
+                        diamond.textContent = '◆';
+                        diamond.classList.remove('text-clay-500');
+                        diamond.classList.add('text-forest-600');
+                    }
+                } else {
+                    btn.classList.remove('bg-forest-50', 'text-forest-600', 'font-bold', 'border', 'border-forest-100');
+                    btn.classList.add('text-ink-600', 'font-medium');
+                    if (diamond) {
+                        diamond.textContent = '◇';
+                        diamond.classList.remove('text-forest-600');
+                        diamond.classList.add('text-clay-500');
+                    }
+                }
+            });
+
+            if (viewName === 'stores') {
+                renderCategoryPills();
+                renderStoresList();
+            } else if (viewName === 'store-detail') {
+                if (storeId) currentDetailStoreId = storeId;
+                renderStoreDetail(currentDetailStoreId);
+            } else if (viewName === 'spinner') {
+                renderSpinnerView();
+            } else if (viewName === 'bookmarks') {
+                renderBookmarksView();
+            } else if (viewName === 'reviews') {
+                renderReviewsView();
+            } else if (viewName === 'add-store') {
+                renderAddStoreView();
+            }
+
+            closeMobileDrawer();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 手機版側邊抽屜控制
+        const mobileMenuBtn = document.getElementById('mobile-menu-toggle');
+        const sidebarDrawer = document.getElementById('sidebar-drawer');
+        const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebarDrawer.classList.remove('-translate-x-full');
+            drawerBackdrop.classList.remove('hidden');
+        });
+
+        function closeMobileDrawer() {
+            sidebarDrawer.classList.add('-translate-x-full');
+            drawerBackdrop.classList.add('hidden');
+        }
+
+        // Toast 提示通知
+        let toastTimer = null;
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // 封面圖組件（支援真實高質感攝影圖與優雅 SVG 備援）
+        function getStoreCoverHTML(store, heightClass = 'h-48 sm:h-56') {
+            return `
+                <div class="relative ${heightClass} w-full overflow-hidden bg-oat-200">
+                    <img src="${store.coverImage}" alt="${store.name}" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <div class="hidden w-full h-full flex flex-col justify-center px-8 bg-oat-100">
+                        <span class="text-xs font-bold text-forest-600">${store.badgeLabel || '嚴選通訊行'}</span>
+                        <div class="font-editorial text-2xl font-black text-ink-900 mt-1">${store.name}</div>
+                        <p class="text-xs text-ink-600 mt-1">${store.subtitle}</p>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-ink-900/75 via-ink-900/20 to-transparent"></div>
+                    <div class="absolute top-3.5 left-4 flex items-center gap-2">
+                        <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold text-white shadow-sm" style="background-color: ${store.themeColor};">
+                            ${store.badgeLabel || '嚴選通訊行'}
+                        </span>
+                    </div>
+                    <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between gap-2 text-white">
+                        <div>
+                            <h3 class="font-editorial text-xl sm:text-2xl font-black tracking-tight drop-shadow-sm">${store.name}</h3>
+                            <p class="text-xs text-white/90 line-clamp-1 mt-0.5">${store.meta.address}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 3. 特色標籤篩選列與通訊行列表 (VIEW 1)
+        function renderCategoryPills() {
+            const baseCategories = ['全部通訊行', '全台連鎖', '中南部人氣', '空機最低價', '攜碼高折扣'];
+            stores.forEach(s => {
+                (s.filterCategories || []).forEach(c => {
+                    if (!baseCategories.includes(c)) baseCategories.push(c);
+                });
+            });
+
+            const bar = document.getElementById('category-filter-bar');
+            bar.innerHTML = `<span class="text-xs font-bold text-ink-600 mr-1">篩選分類：</span>` + baseCategories.map(cat => {
+                const isActive = activeTagFilter === cat;
+                return `
+                    <button type="button" onclick="setTagFilter('${cat}')" class="px-3.5 py-1.5 rounded-full text-xs transition cursor-pointer ${isActive ? 'bg-forest-600 text-white font-bold' : 'bg-oat-100 text-ink-600 hover:bg-oat-200 border border-oat-300 font-medium'}">
+                        ${cat}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function setTagFilter(tag) {
+            activeTagFilter = tag;
+            renderCategoryPills();
+            renderStoresList();
+        }
+
+        function getStoreAverageRating(store) {
+            const list = reviewsData.filter(r => r.storeId === store.id);
+            if (list.length === 0) return { avg: '4.9', count: 0 };
+            const sum = list.reduce((acc, item) => acc + item.rating, 0);
+            return { avg: (sum / list.length).toFixed(1), count: list.length };
+        }
+
+        function renderStoresList() {
+            const query = (document.getElementById('store-search-input')?.value || '').trim().toLowerCase();
+            const container = document.getElementById('stores-list-container');
+            const badge = document.getElementById('store-count-badge');
+            const mobileCount = document.getElementById('mobile-header-count');
+
+            const filtered = stores.filter(store => {
+                const cats = store.filterCategories || [];
+                const matchTag = activeTagFilter === '全部通訊行' || cats.includes(activeTagFilter) || store.tags.includes(activeTagFilter);
+                if (!matchTag) return false;
+                if (!query) return true;
+
+                const inName = store.name.toLowerCase().includes(query);
+                const inSub = store.subtitle.toLowerCase().includes(query);
+                const inAddr = store.meta.address.toLowerCase().includes(query);
+                const inTags = store.tags.some(t => t.toLowerCase().includes(query));
+                const inDeals = store.deals.some(d =>
+                    d.name.toLowerCase().includes(query) ||
+                    d.desc.toLowerCase().includes(query) ||
+                    d.category.toLowerCase().includes(query)
+                );
+                return inName || inSub || inAddr || inTags || inDeals;
+            });
+
+            badge.textContent = `共 ${filtered.length} 間通訊行`;
+            if (mobileCount) mobileCount.textContent = `${stores.length} 間嚴選`;
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-3xl border border-oat-300 p-12 text-center space-y-3">
+                        <div class="text-3xl">🔍</div>
+                        <h3 class="text-lg font-bold text-ink-900">找不到符合關鍵字的通訊行或方案</h3>
+                        <p class="text-sm text-ink-600">試試看清除搜尋條件，或點擊「重置條件」檢視所有收錄通訊行。</p>
+                        <button type="button" onclick="document.getElementById('store-search-input').value=''; setTagFilter('全部通訊行');" class="px-5 py-2.5 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs font-bold cursor-pointer">
+                            重置條件
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filtered.map(store => {
+                const ratingInfo = getStoreAverageRating(store);
+                return `
+                    <article class="group bg-white rounded-3xl border border-oat-300 overflow-hidden hover:border-forest-600/60 transition-all">
+                        <!-- 封面視覺 -->
+                        <div class="border-b border-oat-300 cursor-pointer" onclick="switchView('store-detail', '${store.id}')">
+                            ${getStoreCoverHTML(store, 'h-48 sm:h-52')}
+                        </div>
+
+                        <!-- 卡片內容區 -->
+                        <div class="p-6 sm:p-7 space-y-5">
+                            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-2.5">
+                                        <h2 onclick="switchView('store-detail', '${store.id}')" class="text-xl sm:text-2xl font-black text-ink-900 hover:text-forest-600 transition cursor-pointer">
+                                            ${store.name}
+                                        </h2>
+                                        <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold">
+                                            ★ ${ratingInfo.avg} (${ratingInfo.count} 則評論)
+                                        </span>
+                                    </div>
+                                    <p class="text-sm text-ink-600 mt-1">${store.subtitle}</p>
+                                </div>
+
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <button type="button" onclick="toggleBookmark('${store.id}')" class="px-3.5 py-2 rounded-xl border text-xs font-bold transition cursor-pointer ${store.bookmarked ? 'bg-clay-50 text-clay-600 border-clay-100' : 'bg-oat-100 text-ink-600 border-oat-300 hover:bg-oat-200'}">
+                                        ${store.bookmarked ? '♥ 已收藏' : '♡ 收藏'}
+                                    </button>
+                                    <a href="${store.website}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs font-bold transition inline-flex items-center gap-1">
+                                        <span>官方網站 ↗</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- 3 欄核心資訊摘要 (營業時間 / 參考優惠 / 招牌特色) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs bg-oat-100 p-4 rounded-2xl border border-oat-300/80">
+                                <div>
+                                    <span class="text-ink-600 block">營業時間</span>
+                                    <span class="font-bold text-ink-900 mt-0.5 block">${store.meta.hours}</span>
+                                </div>
+                                <div>
+                                    <span class="text-ink-600 block">參考優惠</span>
+                                    <span class="font-bold text-clay-600 mt-0.5 block">${store.meta.priceRange}</span>
+                                </div>
+                                <div>
+                                    <span class="text-ink-600 block">招牌特色</span>
+                                    <span class="font-bold text-ink-900 mt-0.5 block truncate">${store.meta.signature}</span>
+                                </div>
+                            </div>
+
+                            <!-- 精選 3 項招牌方案預覽 -->
+                            <div class="space-y-2">
+                                <div class="text-xs font-bold text-ink-600">招牌空機與攜碼報價精選：</div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                    ${store.deals.slice(0, 3).map(deal => `
+                                        <div onclick="switchView('store-detail', '${store.id}')" class="p-3.5 rounded-xl bg-oat-50 border border-oat-300 hover:border-forest-600/60 transition cursor-pointer flex flex-col justify-between">
+                                            <div class="font-bold text-xs text-ink-900 line-clamp-1">${deal.name}</div>
+                                            <div class="flex items-center justify-between mt-2.5">
+                                                <span class="text-xs font-black text-clay-600">${deal.price}</span>
+                                                <span class="text-[10px] px-2 py-0.5 rounded bg-oat-200 text-ink-900 font-semibold">${deal.discountBadge || deal.category}</span>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                            <!-- 底部標籤與行動列 -->
+                            <div class="pt-2 flex flex-wrap items-center justify-between gap-3 border-t border-oat-200">
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${store.tags.map(t => `<span class="text-xs px-2.5 py-1 rounded-md bg-oat-100 text-ink-600 font-medium">#${t}</span>`).join('')}
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <a href="${store.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-ink-600 hover:text-ink-900 transition">
+                                        開啟 Google 地圖
+                                    </a>
+                                    <button type="button" onclick="switchView('store-detail', '${store.id}')" class="px-4 py-2 rounded-xl bg-ink-900 hover:bg-forest-600 text-white text-xs font-bold transition cursor-pointer">
+                                        查看店家與 ${store.deals.length} 項方案 →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // 4. 店家詳細資訊頁 (VIEW 1B)
+        function renderStoreDetail(storeId) {
+            const store = stores.find(s => s.id === storeId) || stores[0];
+            if (!store) return;
+
+            const ratingInfo = getStoreAverageRating(store);
+            document.getElementById('breadcrumb-store-name').textContent = store.name;
+            document.getElementById('detail-official-link').href = store.website;
+            document.getElementById('detail-deals-ext-link').href = store.website;
+
+            const bmBtn = document.getElementById('detail-bookmark-btn');
+            if (store.bookmarked) {
+                bmBtn.textContent = '♥ 已收藏';
+                bmBtn.className = 'px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition cursor-pointer bg-clay-50 text-clay-600 border-clay-100';
+            } else {
+                bmBtn.textContent = '♡ 收藏店家';
+                bmBtn.className = 'px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition cursor-pointer bg-white text-ink-600 border-oat-300 hover:bg-oat-100';
+            }
+
+            // 雙欄資訊卡：左側封面圖與行動鈕 + 右側 7 列 <dl> 規格表
+            document.getElementById('store-detail-card').innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <div class="lg:col-span-5 border-b lg:border-b-0 lg:border-r border-oat-300 flex flex-col justify-between bg-oat-50">
+                        ${getStoreCoverHTML(store, 'h-56 sm:h-64')}
+                        <div class="p-5 sm:p-6 space-y-4">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold">
+                                    ★ ${ratingInfo.avg} (${ratingInfo.count} 則評論)
+                                </span>
+                                ${store.tags.map(t => `<span class="text-xs px-2 py-0.5 rounded bg-oat-200 text-ink-900 font-medium">#${t}</span>`).join('')}
+                            </div>
+                            <p class="text-xs sm:text-sm text-ink-600 leading-relaxed">${store.subtitle}</p>
+                            <div class="flex flex-wrap gap-2.5 pt-1">
+                                <a href="${store.mapUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-white hover:bg-oat-200 border border-oat-300 text-xs font-bold text-ink-900 transition">
+                                    📍 開啟 Google 地圖
+                                </a>
+                                <a href="${store.website}" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs font-bold transition">
+                                    官方網站 ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-center">
+                        <div class="border-b border-oat-200 pb-4 mb-4">
+                            <span class="text-[11px] font-bold tracking-wider uppercase text-forest-600">STORE SPECIFICATIONS</span>
+                            <h1 class="text-2xl sm:text-3xl font-black text-ink-900 mt-0.5">${store.name}</h1>
+                        </div>
+
+                        <!-- 7 列 <dl> 詳細資訊表 -->
+                        <dl class="divide-y divide-oat-200 text-sm">
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">地址</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.address}</dd>
+                            </div>
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">預約電話</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.phone}</dd>
+                            </div>
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">參考優惠</dt>
+                                <dd class="font-bold text-clay-600 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.priceRange}</dd>
+                            </div>
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">交通步行</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.traffic}</dd>
+                            </div>
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">營業時間</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.hours}</dd>
+                            </div>
+                            <div class="py-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">申辦速度</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.speed}</dd>
+                            </div>
+                            <div class="pt-2.5 sm:grid sm:grid-cols-3 sm:gap-4">
+                                <dt class="text-xs font-bold text-ink-600">招牌服務</dt>
+                                <dd class="font-bold text-ink-900 mt-0.5 sm:mt-0 sm:col-span-2">${store.meta.signature}</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            `;
+
+            // 渲染 6 項店家方案與報價
+            document.getElementById('detail-deals-count').textContent = `共 ${store.deals.length} 項方案`;
+            document.getElementById('detail-deals-grid').innerHTML = store.deals.map(deal => `
+                <div class="bg-white rounded-2xl border border-oat-300 p-5 flex flex-col justify-between gap-4 hover:border-forest-600/60 transition">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-2.5">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-md bg-forest-50 text-forest-600 border border-forest-100">${deal.category}</span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-clay-50 text-clay-600 border border-clay-100">${deal.discountBadge || '門市特惠'}</span>
+                                <span class="text-base font-black text-clay-600">${deal.price}</span>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-base text-ink-900">${deal.name}</h3>
+                        <p class="text-xs sm:text-sm text-ink-600 mt-1.5 leading-relaxed">${deal.desc}</p>
+                    </div>
+                    <div class="pt-3 border-t border-oat-200 flex justify-between items-center text-xs">
+                        <span class="text-ink-600">實際價格以門市現場報價為準</span>
+                        <a href="${store.website}" target="_blank" rel="noopener noreferrer" class="font-bold text-forest-600 hover:underline">
+                            前往官網 ↗
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            // 渲染會員評論
+            const storeReviews = reviewsData.filter(r => r.storeId === store.id);
+            const revList = document.getElementById('detail-reviews-list');
+            if (storeReviews.length === 0) {
+                revList.innerHTML = `<p class="text-sm text-ink-600 py-4 text-center">尚無評論，歡迎在下方快速留下您的申辦心得！</p>`;
+            } else {
+                revList.innerHTML = storeReviews.map(rev => `
+                    <div class="p-4 rounded-2xl bg-oat-100 border border-oat-300/70 space-y-1.5">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-sm text-ink-900">${rev.author}</span>
+                                ${rev.plan ? `<span class="text-[11px] px-2 py-0.5 rounded bg-white border border-oat-300 text-ink-600 font-medium">${rev.plan}</span>` : ''}
+                            </div>
+                            <span class="text-xs text-amber-500 font-bold">${'★'.repeat(rev.rating)} <span class="text-ink-600 font-normal ml-1">${rev.date}</span></span>
+                        </div>
+                        <p class="text-sm text-ink-900 leading-relaxed">${rev.content}</p>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function handleQuickDetailReview(e) {
+            e.preventDefault();
+            const store = stores.find(s => s.id === currentDetailStoreId) || stores[0];
+            const author = document.getElementById('quick-rev-author').value.trim();
+            const plan = document.getElementById('quick-rev-plan').value.trim();
+            const rating = parseInt(document.getElementById('quick-rev-rating').value, 10) || 5;
+            const content = document.getElementById('quick-rev-content').value.trim();
+            if (!author || !content) return;
+
+            reviewsData.unshift({
+                id: 'rev-' + Date.now(),
+                storeId: store.id,
+                storeName: store.name,
+                author,
+                plan,
+                rating,
+                date: new Date().toISOString().split('T')[0],
+                content
+            });
+
+            document.getElementById('quick-rev-author').value = '';
+            document.getElementById('quick-rev-plan').value = '';
+            document.getElementById('quick-rev-content').value = '';
+
+            renderStoreDetail(store.id);
+            showToast(`已新增您對「${store.name}」的申辦評論`);
+        }
+
+        // 5. 收藏店家管理 (VIEW 3)
+        function toggleBookmark(storeId) {
+            const store = stores.find(s => s.id === storeId);
+            if (!store) return;
+
+            store.bookmarked = !store.bookmarked;
+            updateBookmarkBadge();
+            showToast(store.bookmarked ? `已將「${store.name}」加入收藏店家` : `已取消收藏「${store.name}」`);
+
+            renderStoresList();
+            if (!document.getElementById('view-store-detail').classList.contains('hidden')) {
+                renderStoreDetail(storeId);
+            }
+            if (!document.getElementById('view-bookmarks').classList.contains('hidden')) {
+                renderBookmarksView();
+            }
+        }
+
+        function updateBookmarkBadge() {
+            const count = stores.filter(s => s.bookmarked).length;
+            const badge = document.getElementById('sidebar-bookmark-count');
+            if (badge) badge.textContent = count;
+        }
+
+        function renderBookmarksView() {
+            const onlyBookmarked = document.getElementById('only-bookmarked-toggle').checked;
+            const bmQuery = (document.getElementById('bookmark-search-input')?.value || '').trim().toLowerCase();
+            const container = document.getElementById('bookmarks-container');
+            const list = stores.filter(s => {
+                if (onlyBookmarked && !s.bookmarked) return false;
+                if (!bmQuery) return true;
+                return s.name.toLowerCase().includes(bmQuery) || s.meta.address.toLowerCase().includes(bmQuery);
+            });
+
+            if (list.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-3xl border border-oat-300 p-12 text-center space-y-3">
+                        <div class="text-3xl text-clay-500">♡</div>
+                        <h3 class="text-lg font-bold text-ink-900">目前尚未收藏任何符合條件的通訊行</h3>
+                        <p class="text-sm text-ink-600">前往「通訊行與方案」點擊愛心按鈕，隨時保存您偏好的通訊通路。</p>
+                        <button type="button" onclick="switchView('stores')" class="px-5 py-2.5 rounded-xl bg-forest-600 text-white text-xs font-bold cursor-pointer">
+                            前往通訊行列表
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = list.map(store => `
+                <div class="bg-white rounded-2xl border border-oat-300 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <h3 onclick="switchView('store-detail', '${store.id}')" class="text-lg font-black text-ink-900 hover:text-forest-600 cursor-pointer">${store.name}</h3>
+                            <span class="text-xs px-2.5 py-0.5 rounded bg-oat-100 text-clay-600 font-bold border border-oat-300">${store.meta.priceRange}</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-ink-600">${store.meta.address}</p>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button type="button" onclick="toggleBookmark('${store.id}')" class="px-3.5 py-2 rounded-xl border text-xs font-bold cursor-pointer ${store.bookmarked ? 'bg-clay-50 text-clay-600 border-clay-100' : 'bg-oat-100 text-ink-600 border-oat-300'}">
+                            ${store.bookmarked ? '♥ 已收藏' : '♡ 收藏'}
+                        </button>
+                        <button type="button" onclick="switchView('store-detail', '${store.id}')" class="px-4 py-2 rounded-xl bg-ink-900 hover:bg-forest-600 text-white text-xs font-bold transition cursor-pointer">
+                            查看方案
+                        </button>
+                        <a href="${store.website}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-forest-600 hover:bg-forest-700 text-white text-xs font-bold transition">
+                            官網 ↗
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 6. Canvas 購機轉盤 (VIEW 2)
+        function drawSpinnerCanvas(rotationDeg = 0) {
+            const canvas = document.getElementById('spinner-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const size = canvas.width;
+            const center = size / 2;
+            const radius = center - 4;
+
+            ctx.clearRect(0, 0, size, size);
+
+            const count = stores.length;
+            if (count === 0) return;
+
+            const sliceAngle = (2 * Math.PI) / count;
+            const fallbackPalette = ['#2F5D50', '#C86D51', '#6B8E78', '#D49B4B', '#3E6B5C'];
+
+            ctx.save();
+            ctx.translate(center, center);
+            // 讓索引 0 的起始邊界對齊頂部 (-90度)
+            ctx.rotate(((rotationDeg - 90) * Math.PI) / 180);
+
+            for (let i = 0; i < count; i++) {
+                const start = i * sliceAngle;
+                const end = start + sliceAngle;
+
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.arc(0, 0, radius, start, end);
+                ctx.closePath();
+                ctx.fillStyle = stores[i].themeColor || fallbackPalette[i % fallbackPalette.length];
+                ctx.fill();
+
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = '#F8F6F1';
+                ctx.stroke();
+
+                // 繪製店家名稱文字
+                ctx.save();
+                ctx.rotate(start + sliceAngle / 2);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.font = 'bold 14px "Noto Serif TC", serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(stores[i].name, radius * 0.58, 0);
+                ctx.restore();
+            }
+
+            ctx.restore();
+        }
+
+        function renderSpinnerView() {
+            document.getElementById('spinner-result-title').textContent = `從 ${stores.length} 間通訊行抽選今日首選`;
+            document.getElementById('spinner-pool-title').textContent = `全部可抽選通訊行（${stores.length} 間）`;
+            document.getElementById('spinner-pool-list').innerHTML = stores.map(s => `
+                <button type="button" onclick="switchView('store-detail', '${s.id}')" class="px-3.5 py-2.5 rounded-xl bg-oat-100 hover:bg-forest-50 border border-oat-300 hover:border-forest-100 text-xs sm:text-sm font-bold text-ink-900 transition text-left flex items-center justify-between cursor-pointer">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full inline-block" style="background-color: ${s.themeColor};"></span>
+                        <span>${s.name}</span>
+                    </span>
+                    <span class="text-xs text-forest-600">查看 →</span>
+                </button>
+            `).join('');
+
+            drawSpinnerCanvas(wheelAngle);
+        }
+
+        function spinWheel() {
+            if (isSpinning || stores.length === 0) return;
+            isSpinning = true;
+
+            const actionBtn = document.getElementById('spin-action-btn');
+            actionBtn.disabled = true;
+            actionBtn.textContent = '轉盤旋轉中...';
+
+            const count = stores.length;
+            const chosenIndex = Math.floor(Math.random() * count);
+            const chosenStore = stores[chosenIndex];
+
+            const sliceDeg = 360 / count;
+            const targetCenterDeg = chosenIndex * sliceDeg + sliceDeg / 2;
+            const targetMod = (360 - targetCenterDeg) % 360;
+            const currentMod = ((wheelAngle % 360) + 360) % 360;
+            const delta = (targetMod - currentMod + 360) % 360;
+
+            const startAngle = wheelAngle;
+            const endAngle = wheelAngle + 1440 + delta;
+            const duration = 3800;
+            const startTime = performance.now();
+
+            function animate(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // easeOutQuart 減速曲線
+                const ease = 1 - Math.pow(1 - progress, 4);
+                wheelAngle = startAngle + (endAngle - startAngle) * ease;
+                drawSpinnerCanvas(wheelAngle);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    isSpinning = false;
+                    actionBtn.disabled = false;
+                    actionBtn.textContent = '再轉一次！';
+
+                    document.getElementById('spinner-result-title').textContent = `◆ 今日抽選推薦：${chosenStore.name}`;
+                    document.getElementById('spinner-result-desc').textContent = `${chosenStore.subtitle}（${chosenStore.meta.priceRange}）`;
+
+                    const actionsBox = document.getElementById('spinner-result-actions');
+                    actionsBox.classList.remove('hidden');
+
+                    document.getElementById('spinner-detail-btn').onclick = () => switchView('store-detail', chosenStore.id);
+                    const webBtn = document.getElementById('spinner-web-btn');
+                    webBtn.href = chosenStore.website;
+                    webBtn.innerHTML = `<span>前往${chosenStore.name}官網 ↗</span>`;
+
+                    showToast(`轉盤抽選結果：推薦前往「${chosenStore.name}」！`);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // 7. 分享評論 (VIEW 4)
+        function setReviewStars(stars) {
+            selectedReviewStars = stars;
+            const labels = {
+                1: '1.0 分（有待加強）',
+                2: '2.0 分（普通）',
+                3: '3.0 分（還不錯）',
+                4: '4.0 分（推薦申辦）',
+                5: '5.0 分（非常滿意）'
+            };
+            document.getElementById('star-label').textContent = labels[stars];
+
+            document.querySelectorAll('.star-btn').forEach(btn => {
+                const val = parseInt(btn.dataset.star, 10);
+                btn.classList.toggle('text-amber-400', val <= stars);
+                btn.classList.toggle('text-oat-300', val > stars);
+            });
+        }
+
+        function renderReviewsView() {
+            const select = document.getElementById('review-store-select');
+            select.innerHTML = stores.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
+
+            document.getElementById('total-reviews-count').textContent = `共 ${reviewsData.length} 則評論`;
+            document.getElementById('all-reviews-list').innerHTML = reviewsData.map(rev => `
+                <div class="bg-white p-5 rounded-2xl border border-oat-300 space-y-2">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span onclick="switchView('store-detail', '${rev.storeId}')" class="px-2.5 py-0.5 rounded-md bg-forest-50 text-forest-600 border border-forest-100 text-xs font-bold cursor-pointer hover:bg-forest-100">${rev.storeName}</span>
+                            <span class="font-bold text-sm text-ink-900">${rev.author}</span>
+                            ${rev.plan ? `<span class="text-[11px] px-2 py-0.5 rounded bg-oat-100 border border-oat-300 text-ink-600 font-medium">${rev.plan}</span>` : ''}
+                        </div>
+                        <div class="text-xs font-bold text-amber-500">
+                            ${'★'.repeat(rev.rating)} <span class="text-ink-600 font-normal ml-1">${rev.date}</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-ink-900 leading-relaxed">${rev.content}</p>
+                </div>
+            `).join('');
+        }
+
+        function handleReviewSubmit(e) {
+            e.preventDefault();
+            const storeId = document.getElementById('review-store-select').value;
+            const store = stores.find(s => s.id === storeId) || stores[0];
+            const author = document.getElementById('review-author').value.trim();
+            const plan = document.getElementById('review-plan').value.trim();
+            const content = document.getElementById('review-content').value.trim();
+            if (!author || !content) return;
+
+            reviewsData.unshift({
+                id: 'rev-' + Date.now(),
+                storeId: store.id,
+                storeName: store.name,
+                author,
+                plan,
+                rating: selectedReviewStars,
+                date: new Date().toISOString().split('T')[0],
+                content
+            });
+
+            document.getElementById('review-author').value = '';
+            document.getElementById('review-plan').value = '';
+            document.getElementById('review-content').value = '';
+            setReviewStars(5);
+
+            renderReviewsView();
+            showToast(`已發佈您對「${store.name}」的申辦評論`);
+        }
+
+        // 8. 新增通訊行 AI 智慧建檔 (VIEW 5)
+        function renderAddStoreView() {
+            document.getElementById('manage-store-count').textContent = `目前共 ${stores.length} 間通訊行`;
+            document.getElementById('manage-stores-list').innerHTML = stores.map(s => `
+                <div class="flex items-center justify-between p-3.5 rounded-2xl bg-oat-100 border border-oat-300">
+                    <div>
+                        <div class="font-bold text-sm text-ink-900 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full inline-block" style="background-color: ${s.themeColor};"></span>
+                            <span>${s.name}</span>
+                            ${s.isDefault ? '<span class="text-[10px] px-2 py-0.5 rounded bg-forest-600 text-white font-sans">核心收錄</span>' : ''}
+                        </div>
+                        <div class="text-xs text-ink-600 mt-0.5 truncate max-w-xs sm:max-w-sm">${s.meta.address}</div>
+                    </div>
+                    <div class="flex items-center gap-2.5 shrink-0">
+                        <button type="button" onclick="switchView('store-detail', '${s.id}')" class="text-xs font-bold text-forest-600 hover:underline cursor-pointer">檢視</button>
+                        ${!s.isDefault ? `<button type="button" onclick="deleteCustomStore('${s.id}')" class="text-xs font-bold text-clay-600 hover:underline cursor-pointer">移除</button>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function handleAddStoreSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('new-store-name').value.trim();
+            const url = document.getElementById('new-store-url').value.trim();
+            const region = document.getElementById('new-store-region').value.trim() || '全台連鎖直營門市';
+            const tag = document.getElementById('new-store-tag').value;
+            const desc = document.getElementById('new-store-desc').value.trim() || '空機價格公開透明、三大電信攜碼折扣與現場專業資料轉移服務';
+
+            if (!name || !url) return;
+
+            const newStore = {
+                id: 'store-' + Date.now(),
+                name,
+                subtitle: desc,
+                website: url,
+                mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`,
+                coverImage: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=900&q=80',
+                isDefault: false,
+                bookmarked: true,
+                themeColor: '#587864',
+                badgeLabel: 'AI 建檔收錄',
+                filterCategories: ['全台連鎖', '空機最低價', '攜碼高折扣'],
+                tags: [tag, '三大電信攜碼', '透明報價'],
+                meta: {
+                    address: region,
+                    phone: '各門市專線請見官方網站',
+                    priceRange: '空機優惠價／門號攜碼高折扣',
+                    traffic: '門市商圈步行約 3–5 分鐘',
+                    hours: '週一至週日 11:30 – 21:30',
+                    speed: '約 15–25 分鐘（官網透明報價、現場資料轉移）',
+                    signature: desc
+                },
+                deals: [
+                    {
+                        category: tag,
+                        name: `【空機破盤】${name}・iPhone 16 Pro 256G 全新未拆封`,
+                        price: '官網即時價',
+                        discountBadge: '空機最低價',
+                        desc: desc
+                    },
+                    {
+                        category: '5G 攜碼',
+                        name: `【攜碼神單】${name}・三大電信 5G 1399 攜碼專案`,
+                        price: '享高額折抵',
+                        discountBadge: '攜碼高折扣',
+                        desc: '中華電信／台灣大哥大／遠傳電信全資費皆可現場試算比較。'
+                    },
+                    {
+                        category: '4G 吃到飽',
+                        name: `【高CP值】${name}・4G 499 不限速吃到飽攜碼方案`,
+                        price: '$499/月',
+                        discountBadge: '攜碼熱銷',
+                        desc: '合約透明單純，適合日常追劇與社群使用族群。'
+                    },
+                    {
+                        category: '安卓旗艦',
+                        name: `【旗艦安卓】${name}・Samsung Galaxy S25 Ultra 256G`,
+                        price: '現折數千元',
+                        discountBadge: '原廠公司貨',
+                        desc: '台灣原廠公司貨現貨供應，享原廠一年保固。'
+                    },
+                    {
+                        category: '舊換新加碼',
+                        name: `【舊機換新機】${name}・全品牌二手機高價回收折抵`,
+                        price: '最高加碼 $2,000',
+                        discountBadge: '現場折抵',
+                        desc: '現場 10 分鐘快速檢測殘值，直接折抵新機金額與免費資料轉移。'
+                    },
+                    {
+                        category: '貼心加值',
+                        name: `【貼心加值】${name}・滿版保護貼＋無痛資料轉移`,
+                        price: '$490 起',
+                        discountBadge: '購機加購價',
+                        desc: 'LINE 對話紀錄與照片完整搬家，門市專業人員現場精準代貼。'
+                    }
+                ]
+            };
+
+            stores.push(newStore);
+            updateBookmarkBadge();
+
+            document.getElementById('ai-preview-content').innerHTML = `
+                <div class="font-editorial font-black text-ink-900 text-base">${newStore.name}</div>
+                <p class="text-xs text-ink-600">服務據點：${newStore.meta.address}</p>
+                <p class="text-xs text-clay-600 font-bold">招牌專案：${newStore.subtitle}</p>
+            `;
+
+            document.getElementById('add-store-form').reset();
+            renderAddStoreView();
+            showToast(`AI 智慧建檔完成！已將「${newStore.name}」加入列表與轉盤`);
+        }
+
+        function deleteCustomStore(id) {
+            stores = stores.filter(s => s.id !== id);
+            updateBookmarkBadge();
+            renderAddStoreView();
+            showToast('已移除自訂通訊行');
+        }
+
+        // 初始化頁面
+        document.addEventListener('DOMContentLoaded', () => {
+            updateBookmarkBadge();
+            renderCategoryPills();
+            renderStoresList();
+        });
+    </script>
+</body>
+</html>
